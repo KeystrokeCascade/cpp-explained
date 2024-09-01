@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<link href="https://www.splashkit.io/images/favicon.ico" rel="icon" type="image/ico">
-	<title>C++</title>
-	<link rel="stylesheet" href="style.css" />
-</head>
+	<head>
+		<meta charset="utf-8" />
+		<title>C++</title>
+		<link rel="icon" type="image/ico" href="https://www.splashkit.io/images/favicon.ico">
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<body>
-	<h1>Arrays in <img src="https://github.com/isocpp/logos/raw/master/cpp_logo.svg"></h1>
+	<body>
+		<h1>Arrays in <img src="https://github.com/isocpp/logos/raw/master/cpp_logo.svg"></h1>
 
-	<p>Arrays in C++ cannot be extended or shrunk.  This means that no matter what you do, you cannot add or remove elements from it without just recreating the whole array.</p>
+		<p>Arrays in C++ cannot be extended or shrunk.  This means that no matter what you do, you cannot add or remove elements from it without just recreating the whole array.</p>
 
-	<p><code>int arr[] = {<span style="background-image: url('media/bars.gif')">3, 5, 56, 12, 9</span>};</code></p>
+		<p><code>int arr[] = {<span style="background-image: url('media/bars.gif')">3, 5, 56, 12, 9</span>};</code></p>
 
-	<p>Due to this, 90% of use cases are better solved with vectors, at least for humans coding.  Arrays still have their uses in the backend for uses that you may never see.  For example, the <code>string</code> type is actually an array of <code>char</code> types, like such:</p>
+		<p>Due to this, 90% of use cases are better solved with vectors, at least for humans coding.  Arrays still have their uses in the backend for uses that you may never see.  For example, the <code>string</code> type is actually an array of <code>char</code> types, like such:</p>
 
-	<p><code>char s[] = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};</code></p>
+		<p><code>char s[] = {'h', 'e', 'l', 'l', 'o', ' ', 'w', 'o', 'r', 'l', 'd'};</code></p>
 
-	<p>However, while the length of an array may not change, the elements inside it can by using an index.</p>
+		<p>However, while the length of an array may not change, the elements inside it can by using an index.</p>
 
-	<pre>
-arr[0] = 7;
-arr[2] = 79;
-arr[3] = 54;
+		<pre>
+	arr[0] = 7;
+	arr[2] = 79;
+	arr[3] = 54;
 
-int arr[] = {<span class="array no-print">3</span><span class="array arralt1">7</span>, 5, <span class="array no-print">56</span><span class="array arralt2">79</span>, <span class="array no-print">12</span><span class="array arralt2">54</span>, 9};</pre>
+	int arr[] = {<span class="array no-print">3</span><span class="array arralt1">7</span>, 5, <span class="array no-print">56</span><span class="array arralt2">79</span>, <span class="array no-print">12</span><span class="array arralt2">54</span>, 9};</pre>
 
-	<hr>
+		<hr>
 
-	<h1>Vectors in <img src="https://github.com/isocpp/logos/raw/master/cpp_logo.svg"></h1>
-	
-	<p>Vectors in C++ behave almost the exact same as arrays but with the crucial difference that they can have elements added and taken away.</p>
-	
-	<pre>
-vector&ltint&gt v;
+		<h1>Vectors in <img src="https://github.com/isocpp/logos/raw/master/cpp_logo.svg"></h1>
 
-v.push_back(5);
-v.push_back(24);
-v.push_back(12);
-vector&ltint& v = {<span class="push-back pushalt1">5, </span><span class="push-back pushalt2">24, </span><span class="push-back pushalt3">12</span><span class="push-back pushalt4">};</span></pre>
+		<p>Vectors in C++ behave almost the exact same as arrays but with the crucial difference that they can have elements added and taken away.</p>
 
-	<p>Vectors also have many more functions associated with them, such as the <code>push_back()</code> shown above that adds an element to the end of a vector, <code>pop_back()</code> to remove the element at the end of a vector, and <code>size()</code> to give exactly how many elements there are.
-	
-	<pre>
-v.size();
-vector&ltint&gt v = {
-	5,	<span class="vector-size vectalt1">//1</span>
-	24,	<span class="vector-size vectalt2">//2</span>
-	12	<span class="vector-size vectalt3">//3</span>
-};
+		<pre>
+	vector&ltint&gt v;
 
-// Returns 3</pre>
+	v.push_back(5);
+	v.push_back(24);
+	v.push_back(12);
+	vector&ltint& v = {<span class="push-back pushalt1">5, </span><span class="push-back pushalt2">24, </span><span class="push-back pushalt3">12</span><span class="push-back pushalt4">};</span></pre>
 
-	<hr>
-	
-	<h1>For Loops in <img src="https://github.com/isocpp/logos/raw/master/cpp_logo.svg"></h1>
-	
-	<p>For loops are a control flow function allowing you to repeat a line of code for a certain number of times, such as this one which repeats 3 times.</p>
-	
-	<pre>
-for (int i = 0; i < 3; i++) {
-	write_line("Hello, World!");
-}</pre>
+		<p>Vectors also have many more functions associated with them, such as the <code>push_back()</code> shown above that adds an element to the end of a vector, <code>pop_back()</code> to remove the element at the end of a vector, and <code>size()</code> to give exactly how many elements there are.
 
-	<pre>
-// Returns
-&gt <span class="for-loop foralt1">Hello, World!</span>
-&gt <span class="for-loop foralt2">Hello, World!</span>
-&gt <span class="for-loop foralt3">Hello, World!</span>
-</pre>
+		<pre>
+	v.size();
+	vector&ltint&gt v = {
+		5,	<span class="vector-size vectalt1">//1</span>
+		24,	<span class="vector-size vectalt2">//2</span>
+		12	<span class="vector-size vectalt3">//3</span>
+	};
 
-	<p>However their main use is to iterate through data so you don't have to re-use code and can be more flexible with your data, such as being able to work through every element in a vector, no matter the size.</p>
-	
-	<pre>
-vector&ltstring&gt v = {"Hello,", "World", "!"}
+	// Returns 3</pre>
 
-for (int i = 0; i < v.size(); i++) {
-	write_line(v[i]);
-}</pre>
+		<hr>
 
-	<pre>
-// Returns
-&gt <span class="for-loop foralt1">Hello,</span>
-&gt <span class="for-loop foralt2">World</span>
-&gt <span class="for-loop foralt3">!</span>
-</pre>
+		<h1>For Loops in <img src="https://github.com/isocpp/logos/raw/master/cpp_logo.svg"></h1>
 
-	<p></p>
+		<p>For loops are a control flow function allowing you to repeat a line of code for a certain number of times, such as this one which repeats 3 times.</p>
 
-</body>
+		<pre>
+	for (int i = 0; i < 3; i++) {
+		write_line("Hello, World!");
+	}</pre>
+
+		<pre>
+	// Returns
+	&gt <span class="for-loop foralt1">Hello, World!</span>
+	&gt <span class="for-loop foralt2">Hello, World!</span>
+	&gt <span class="for-loop foralt3">Hello, World!</span>
+	</pre>
+
+		<p>However their main use is to iterate through data so you don't have to re-use code and can be more flexible with your data, such as being able to work through every element in a vector, no matter the size.</p>
+
+		<pre>
+	vector&ltstring&gt v = {"Hello,", "World", "!"}
+
+	for (int i = 0; i < v.size(); i++) {
+		write_line(v[i]);
+	}</pre>
+
+		<pre>
+	// Returns
+	&gt <span class="for-loop foralt1">Hello,</span>
+	&gt <span class="for-loop foralt2">World</span>
+	&gt <span class="for-loop foralt3">!</span>
+	</pre>
+
+		<p></p>
+
+	</body>
 </html>
