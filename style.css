@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700');
+
+body {
+	font-family: Open Sans;
+	max-width: 60%;
+	margin: auto;
+	font-size: 14pt;
+}
+
+h1 {
+	font-family: Ubuntu;
+}
+
+img {
+	max-height: 1em;
+	vertical-align: text-bottom;
+}
+
+code, pre {
+	font-weight: 700;
+	background-color: #EEE;
+	border-radius: 3px;
+	padding: 3px;
+	tab-size: 4;
+	-moz-tab-size: 4;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		filter: invert(1);
+		background: #222;
+	}
+
+	img {
+		filter: invert(1);
+	}
+}
+
+@media print {
+	body {
+		max-width: 100%;
+	}
+	.no-print {
+		opacity: 0 !important;
+	}
+	.vector-size, .for-loop {
+		opacity: 1 !important;
+	}
+	hr {
+		page-break-after: always;
+	}
+}
+
+/* For arrays */
+
+@keyframes array-fade {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.array {
+	position: relative;
+	display: inline-block;
+	animation: array-fade 2s infinite;
+	animation-timing-function: ease-in-out;
+	animation-direction: alternate-reverse;
+}
+
+.arralt1 {
+	left: -.6em;
+	margin-right: -.6em;
+	animation-direction: alternate;
+	color: #F00;
+}
+
+.arralt2 {
+	left: -1.2em;
+	margin-right: -1.2em;
+	animation-direction: alternate;
+	color: #F00;
+}
+
+/* For vectors */
+
+@keyframes push-back-move-1 {
+	0% {opacity: 0; left: 200px;}
+	10% {opacity: 1; left: 0;}
+	100% {opacity: 1; left: 0;}
+}
+
+@keyframes push-back-move-2 {
+	0% {opacity: 0; left: 200px;}
+	10% {opacity: 0; left: 200px;}
+	20% {opacity: 1; left: 0;}
+	100% {opacity: 1; left: 0;}
+}
+
+@keyframes push-back-move-3 {
+	0% {opacity: 0; left: 200px;}
+	20% {opacity: 0; left: 200px;}
+	30% {opacity: 1; left: 0;}
+	100% {opacity: 1; left: 0;}
+}
+
+@keyframes push-back-move-4 {
+	0% {opacity: 0; left: 200px;}
+	30% {opacity: 0; left: 200px;}
+	40% {opacity: 1; left: 0;}
+	100% {opacity: 1; left: 0;}
+}
+
+.push-back {
+	position: relative;
+	display: inline-block;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+}
+
+.pushalt1 {
+	animation-name: push-back-move-1;
+}
+
+.pushalt2 {
+	animation-name: push-back-move-2;
+}
+
+.pushalt3 {
+	animation-name: push-back-move-3;
+}
+
+.pushalt4 {
+	animation-name: push-back-move-4;
+}
+
+@keyframes vector-size-fade {
+	0% {opacity: 1;}
+	30% {opacity: 0;}
+	100%  {opacity: 0;}
+}
+
+.vector-size {
+	position: relative;
+	display: inline-block;
+	animation: vector-size-fade 3s infinite;
+	animation-timing-function: ease-in-out;
+	opacity: 0;
+}
+
+.vectalt1 {
+	animation-delay: 1s;
+}
+
+.vectalt2 {
+	animation-delay: 2s;
+}
+
+.vectalt3 {
+	animation-delay: 3s;
+}
+
+/* For for loops */
+
+@keyframes for-loop-fade {
+	0% {opacity: 1;}
+	100%  {opacity: 0;}
+}
+
+.for-loop {
+	position: relative;
+	display: inline-block;
+	animation: vector-size-fade 3s infinite;
+	animation-timing-function: ease-in-out;
+	opacity: 0;
+}
+
+.foralt1 {
+	animation-delay: .5s;
+}
+
+.foralt2 {
+	animation-delay: 1s;
+}
+
+.foralt3 {
+	animation-delay: 1.5s;
+}
