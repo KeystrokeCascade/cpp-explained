@@ -1,2 +1,2 @@
 # C++ Explained
- A website explaining some basics of C++ while also demonstrating a variety of CSS animations.
+School project on writing a website to explain some of the basic of C++ while experimenting with a variety of CSS animations.
